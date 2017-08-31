@@ -35,6 +35,8 @@
                     $row['id_nowego_hosta'].'">Dodaj hosta do bazy</a></td>';
                     $tabelka .= "</tr>";
                     $licznik++;
+                    //zrobienie z tego dodatkowej tabeli w bazie wpakowanie tech rekordów. 
+                    //jak już się zrobią wszystkie tabele to się zrobi klasę która tą tabele wyświetli(wyswietlroznice.php?)
             }
             mysqli_free_result($res);
             return $tabelka;

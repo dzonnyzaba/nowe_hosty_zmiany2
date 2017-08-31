@@ -1,7 +1,54 @@
 <?php
-if(isset($_GET['network'])){
-    if($_GET['network']=="10" || $_GET['network']=="64"){
-        
+
+class test{
+    private $xml_obyekt;
+    
+    public function __construct() {
+        $this->xml_obyekt = new XML_do_bazy();
+    }
+    public function pobierzPlikiXML(){
+        $dir = "xmle";
+        $tabtmp = array();
+        $files = scandir($dir);
+        $ile = count($files);
+        foreach($files as $f){
+            if($f!="." && $f!=".."){
+            if($f=='10_10_0_0-18.xml'){
+                $tap = array();
+                $tap[0] = basename($f, ".xml");
+                $tap[1] = 'dhcpd-vlan10';
+                $tap[2] = 10;
+                $tabtmp[] = $tap;
+            }else{
+                $tap = array();
+                $tap[0] = basename($f, ".xml");
+                $tap[1] = 'dhcpd-vlan64';
+                $tap[2] = 64;
+                $tabtmp[] = $tap;
+            }
+        }
+		}
+        if(count($tabtmp)>=1){
+            
+                return $tabtmp;
+        }else{
+                echo "nieeeeeeeeeeeeeeee";
+                header('location: index.php?error=1');
+                exit();
+        }
+        var_dump($tabtmp);
+    }
+	
+	
+    public function powysylaj(){
+        $r = $this->pobierzPlikiXML();
+        if($r){
+            foreach ($r as $element){
+                $this->xml_obyekt($element[0], $element[1], $element[2]);
+            }
+        }
+    }
+}
 
 class XML_do_bazy{
     private $plik_input_conf;
@@ -15,20 +62,13 @@ class XML_do_bazy{
     private $class_db_file;
 	
     
-    public function __construct(){
-        if($_GET['network']=="10"){
-            $this->plik_input_conf = 'dhcpd-vlan10.conf';
-            $this->plik_input_conf_to_txt = 'dhcpd-vlan10.txt';
-            $this->plik_xml = '10_10_0_0-18.xml';
-            $this->plik_xml_to_txt = '10_10_0_0-18.txt';
-            $this->vlan = 10;
-        }else{
-            $this->plik_input_conf = 'dhcpd-vlan64.conf';
-            $this->plik_input_conf_to_txt = 'dhcpd-vlan64.txt';
-            $this->plik_xml = '10_10_64_0-18.xml';
-            $this->plik_xml_to_txt = '10_10_64_0-18.txt';
-            $this->vlan = 64;
-        }
+    public function __construct($plikxml, $plikconf, $jakasiec){
+            $this->plik_input_conf = $plikconf.".conf";
+            $this->plik_input_conf_to_txt = $plikconf.'.txt';
+            $this->plik_xml = $plikxml.'.xml';
+            $this->plik_xml_to_txt = $plikxml.'.txt';
+            $this->vlan = $jakasiec;
+        
         $this->dataczas = date("d-m-y");
         $this->class_db_file = 'db.php';
         if(file_exists($this->class_db_file)){
@@ -39,10 +79,10 @@ class XML_do_bazy{
         }
     }
     
-    public function wypelnijTabliceZnane(){
-        $sql = "LOAD DATA LOCAL INFILE 'C:/xampp/htdocs/nowe_hosty/nowe_hosty_zmiany1/txt/$this->plik_input_conf_to_txt' IGNORE INTO TABLE tmp 
-                FIELDS TERMINATED BY ',' LINES TERMINATED BY '\r\n' (@klucz, nowy_mac, nowy_ip, data, VLAN)";
-    }
+//    public function wypelnijTabliceZnane(){
+//        $sql = "LOAD DATA LOCAL INFILE 'C:/xampp/htdocs/nowe_hosty/nowe_hosty_zmiany1/txt/$this->plik_input_conf_to_txt' IGNORE INTO TABLE tmp 
+//                FIELDS TERMINATED BY ',' LINES TERMINATED BY '\r\n' (@klucz, nowy_mac, nowy_ip, data, VLAN)";
+//    }
 
 //    private function pobierzPlikiXML(){
 //        $dir = "xml";
@@ -66,7 +106,7 @@ class XML_do_bazy{
 	
 	
     public function tworzStringXMLnaTxt(){
-        $obiekt = simplexml_load_file("input/".$this->plik_xml);
+        $obiekt = simplexml_load_file("xmle/".$this->plik_xml);
         $attrdate = $obiekt->runstats->finished->attributes();
         $datatab = $attrdate['timestr'];
         $data = $this->utworzDate($datatab);
@@ -88,7 +128,7 @@ class XML_do_bazy{
     
     public function tworzStringConfNaTxt(){
         $wzor = '@^host ([0-9a-zA-Z._-]+) +{fixed-address (\d+\.\d+\.\d+\.\d+) ?;hardware ethernet +([a-fA-F0-9]{2}:[a-fA-F0-9]{2}:[a-fA-F0-9]{2}:[a-fA-F0-9]{2}:[a-fA-F0-9]{2}:[a-fA-F0-9]{2});}@';
-        $tab_z_conf = file("input/".$this->plik_input_conf);
+        $tab_z_conf = file("confy/".$this->plik_input_conf);
         $string = "";
         $licznik=0;
         foreach($tab_z_conf as $linijka){
@@ -110,9 +150,9 @@ class XML_do_bazy{
     public function wypelnijTabliceTmpiZnane(){
 	//var_dump($this->lista_xmli)."<br>";
         //foreach($this->lista_xmli as $plik_xml){
-        $sql_tmp = "LOAD DATA LOCAL INFILE 'C:/xampp/htdocs/nowe_hosty/nowe_hosty_zmiany1/txt/$this->plik_xml_to_txt' IGNORE INTO TABLE tmp 
+        $sql_tmp = "LOAD DATA LOCAL INFILE 'C:/xampp/htdocs/nowe_hosty/nowe_hosty_zmiany2/txt/$this->plik_xml_to_txt' IGNORE INTO TABLE tmp 
 			FIELDS TERMINATED BY ',' LINES TERMINATED BY '\r\n' (@klucz, nowy_mac, nowy_ip, data, VLAN)";
-        $sql_znane = "LOAD DATA LOCAL INFILE 'C:/xampp/htdocs/nowe_hosty/nowe_hosty_zmiany1/txt/$this->plik_input_conf_to_txt' IGNORE INTO TABLE  znane_hosty
+        $sql_znane = "LOAD DATA LOCAL INFILE 'C:/xampp/htdocs/nowe_hosty/nowe_hosty_zmiany2/txt/$this->plik_input_conf_to_txt' IGNORE INTO TABLE  znane_hosty
 			FIELDS TERMINATED BY ',' LINES TERMINATED BY '\r\n' (@klucz, nazwa_hosta, mac_address, ip_address, VLAN)";
         
         if($result = mysqli_query($this->db->connection, $sql_tmp)){
@@ -133,6 +173,8 @@ class XML_do_bazy{
 	//}
         //var_dump($result);
         //mysqli_close($this->db->connection);
+        
+        header('Location: roznice_oop.php');
     }
 
 public function utworzDate($s){
@@ -189,10 +231,5 @@ $nowyxml = new XML_do_bazy();
 $nowyxml->tworzPlikiTxt();
 $nowyxml->wypelnijTabliceTmpiZnane();
 //$nowyxml->pobierzPlikiXML();
-header('Location: roznice_oop.php');
-    }else{
-        header('location: index.php?error=2');
-    }
-}else{
-    header('location: index.php?error=3');
-}
+//header('Location: roznice_oop.php');
+
