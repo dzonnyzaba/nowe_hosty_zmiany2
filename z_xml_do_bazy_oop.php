@@ -1,5 +1,5 @@
 <?php
-
+require_once "roznice_oop.php";
 class test{
     public function pobierzPlikiXML(){
         $dir = "xmle";
@@ -40,6 +40,7 @@ class test{
                 $xml_do_bazy_obyekt = new XML_do_bazy($element[0], $element[1], $element[2]);
             }
         }
+
     }
 }
 
@@ -107,7 +108,7 @@ class XML_do_bazy{
                 }
             }
         }
-        //echo $string;
+
         //echo "<br><br><br>";
         return $string;
     }
@@ -144,7 +145,6 @@ class XML_do_bazy{
 	//}
         //var_dump($result);
         //mysqli_close($this->db->connection);
-        
         header('Location: roznice_oop.php');
     }
 

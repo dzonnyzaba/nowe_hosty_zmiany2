@@ -28,7 +28,6 @@
 
         
         public function znajdzRoznice(){
-
 	$zapytanie = "SELECT * FROM tmp WHERE nowy_mac NOT IN (SELECT mac_address FROM znane_hosty)";
         //SELECT * FROM tmp WHERE nowy_mac NOT IN (SELECT mac_address FROM znane_hosty) AND nowy_ip NOT IN(SELECT ip_address FROM znane_hosty)
 	$rezultat = mysqli_query($this->db->connection, $zapytanie);
@@ -36,14 +35,32 @@
         return $rezultat;
         }
         
-        public function wyswietlRoznice(){
+        public function TworzTabeleRoznice(){
             $res = $this->znajdzRoznice();
-            $licznik=1;
-            $tabelka = "";
+//            $licznik=1;
+//            $tabelka = "";
             while($row = mysqli_fetch_array($res)){
                 $sql_wypelnij_roznice = "INSERT INTO roznice(nowy_ip, nowy_mac, data, VLAN) values('".$row['nowy_ip']."', '"
                     .$row['nowy_mac']."', '".$row['data']."', '".$row['VLAN']."')";
                 $rezultat_wstawiaj = mysqli_query($this->db->connection, $sql_wypelnij_roznice);
+//                    $tabelka .= "<tr><td>$licznik</td>";
+//                    $tabelka .= "<td>".$row['id_nowego_hosta']."</td><td>".
+//                    $row['nowy_ip']."</td><td>".$row['nowy_mac'].'</td><td><a href="dodaj_host_oop.php?id='.
+//                    $row['id_nowego_hosta'].'">Dodaj hosta do bazy</a></td>';
+//                    $tabelka .= "</tr>";
+//                    $licznik++;
+            }
+            mysqli_free_result($res);
+            $this->czyscTabeleZnaneItmp();
+            //echo $tabelka;
+        }
+        
+        public function wyswietlTabeleRoznice(){
+            $licznik=1;
+            $tabelka = "";
+            $sql_wyswietl_tab_roznice = "SELECT * FROM roznice";
+            $res = mysqli_query($this->db->connection, $sql_wyswietl_tab_roznice);
+            while($row = mysqli_fetch_array($res)){
                     $tabelka .= "<tr><td>$licznik</td>";
                     $tabelka .= "<td>".$row['id_nowego_hosta']."</td><td>".
                     $row['nowy_ip']."</td><td>".$row['nowy_mac'].'</td><td><a href="dodaj_host_oop.php?id='.
@@ -52,9 +69,9 @@
                     $licznik++;
             }
             mysqli_free_result($res);
-            $this->czyscTabeleZnaneItmp();
-            echo $tabelka;
+            return $tabelka;
         }
+        
         
         public function czyscTabeleZnaneItmp(){
             $rezultat_czysc_znane = mysqli_query($this->db->connection, $this->zapytanie_czysc_znane);        
@@ -81,7 +98,8 @@
 	</tr>
 <?php
 $roznica = new Roznice();
-$roznica->wyswietlRoznice();
+$roznica->TworzTabeleRoznice();
+echo $roznica->wyswietlTabeleRoznice();
 ?>
     </table>
  <a href="zakoncz_oop.php">Zakończ</a>

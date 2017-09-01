@@ -38,48 +38,26 @@ class Dodaj{
             echo "brak pliku z klasą do łączenia z db";
         }
     }
-    public function dodaj_do_pliku(){
-        
-    }
-/*    
+    
     public function pobierzPozostaleDane(){
-        $zapytanie_nowe = "SELECT * FROM tmp WHERE id_nowego_hosta=$this->id";
+        $zapytanie_nowe = "SELECT * FROM roznice WHERE id_nowego_hosta=$this->id";
 	$rezultat_nowe = mysqli_query($this->db->connection, $zapytanie_nowe);
 	$row = mysqli_fetch_array($rezultat_nowe);
         return $row;
     }
     
-    public function dodajRekord(){
-        $row_sel = $this->pobierzPozostaleDane();
-        $zapytanie_znane = "INSERT INTO znane_hosty(nazwa_hosta, mac_address, 
-	data_dodania, lokalizacja, uwagi, VLAN, ip_address) 
-	VALUES('".$this->nowa_nazwa."', '".$row_sel['nowy_mac']."', '".$row_sel['data']."', '".
-        $this->nowa_lokalizacja."', '".$this->nowe_uwagi."', '".$row_sel['VLAN']."', '"
-        .$row_sel['nowy_ip']."')";
-        $rezultat_znane = mysqli_query($this->db->connection, $zapytanie_znane);
-        if($rezultat_znane){
-		echo "dołączono host do bazy";
-	}else{
-		echo "nie udało się dołączyc hosta do bazy";
-	}
-        
-        return 0;
+    public function dodaj_do_pliku(){
+        $row = $this->pobierzPozostaleDane();
+        $path = "confy/dhcpd-vlan".$row['VLAN'].".conf";
+        //$wiersz="";
+        $wiersz= "host ".$this->nowa_nazwa." {fixed-address ".$row['nowy_ip'].
+        ";hardware ethernet ".$row['nowy_mac'].";}"."\r\n";
+        file_put_contents($path, $wiersz, FILE_APPEND);
     }
-    
-    public function kasujRekord(){
-	$zapytanie_nowe_kasuj = "DELETE FROM tmp WHERE id_nowego_hosta=$this->id";
-	mysqli_query($this->db->connection, $zapytanie_nowe_kasuj);
-	
-	//mysqli_close($this->db->connection);
-        header('location: roznice_oop.php');        
-    }
- * 
- */
 }
 $dodaj = new Dodaj();
-$dodaj->dodajRekord();
-$dodaj->kasujRekord();
-//header('location: roznice_oop.php');
+$dodaj->dodaj_do_pliku();
+header('location: z_xml_do_bazy_oop.php');
 }else{
     echo "<p>wypełnij wszystkie pola</p>";
 }

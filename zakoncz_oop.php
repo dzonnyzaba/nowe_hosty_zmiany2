@@ -8,21 +8,18 @@ class Zakoncz{
     private $do_pliku;
     private $nazwa_pliku;
     
-    private $zapytanie_czysc_tmp;
-    private $zapytanie_zeruj_tmp;
-    
-    private $zapytanie_czysc_znane;
-    private $zapytanie_zeruj_znane;
+    private $zapytanie_czysc_roznice;
+    private $zapytanie_zeruj_roznice;
 
     public function __construct(){
-        $this->do_pliku = "";
-        $this->nazwa_pliku = "input/";
-
+        /*$this->do_pliku = "";
+        $this->nazwa_pliku = "input/";*/
+        /*
         $this->zapytanie_czysc_tmp = "DELETE FROM tmp";
         $this->zapytanie_zeruj_tmp = "ALTER TABLE tmp AUTO_INCREMENT=0";
-        
-        $this->zapytanie_czysc_znane = "DELETE FROM znane_hosty";
-        $this->zapytanie_zeruj_znane = "ALTER TABLE znane_hosty AUTO_INCREMENT=0";
+        */
+        $this->zapytanie_czysc_roznice = "DELETE FROM roznice";
+        $this->zapytanie_zeruj_roznice = "ALTER TABLE roznice AUTO_INCREMENT=0";
         
         $this->class_db_file = 'db.php';
 
@@ -33,7 +30,7 @@ class Zakoncz{
             echo "brak pliku z klasą do łączenia z db";
         }
     }
-    
+    /*
     public function getVLAN(){
         $zapytanie_vlan = "SELECT VLAN FROM znane_hosty WHERE id_hosta=1";
         $rezultat_vlan = mysqli_query($this->db->connection, $zapytanie_vlan);
@@ -41,7 +38,9 @@ class Zakoncz{
         $nr_vlan = $row['VLAN'];
         return $nr_vlan;
     }
-    
+     * 
+     */
+    /*
     public function generujPlik(){
         $zapytanie_generuj = "SELECT * FROM znane_hosty";
         
@@ -58,13 +57,17 @@ class Zakoncz{
         file_put_contents($this->nazwa_pliku, $this->do_pliku);
         header('location: index.php');
     }
+     * 
+     */
         
     public function czyscTabele(){
-        $rezultat_czysc_znane = mysqli_query($this->db->connection, $this->zapytanie_czysc_znane);        
-        $rezultat_zeruj_znane = mysqli_query($this->db->connection, $this->zapytanie_zeruj_znane);
-        
+        $rezultat_czysc_roznice = mysqli_query($this->db->connection, $this->zapytanie_czysc_roznice);        
+        $rezultat_zeruj_roznice = mysqli_query($this->db->connection, $this->zapytanie_zeruj_roznice);
+        /*
 	$rezultat_czysc_tmp = mysqli_query($this->db->connection, $this->zapytanie_czysc_tmp);        
         $rezultat_zeruj_tmp = mysqli_query($this->db->connection, $this->zapytanie_zeruj_tmp);
+         * 
+         */
     }
     
 
@@ -75,6 +78,6 @@ class Zakoncz{
     }
 }
 $koniec = new Zakoncz();
-$koniec->generujPlik();
+//$koniec->generujPlik();
 $koniec->czyscTabele();
 //$koniec->czyscTabeleznane();
