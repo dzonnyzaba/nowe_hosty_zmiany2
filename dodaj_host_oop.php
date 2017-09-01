@@ -38,7 +38,10 @@ class Dodaj{
             echo "brak pliku z klasą do łączenia z db";
         }
     }
-    
+    public function dodaj_do_pliku(){
+        
+    }
+/*    
     public function pobierzPozostaleDane(){
         $zapytanie_nowe = "SELECT * FROM tmp WHERE id_nowego_hosta=$this->id";
 	$rezultat_nowe = mysqli_query($this->db->connection, $zapytanie_nowe);
@@ -70,6 +73,8 @@ class Dodaj{
 	//mysqli_close($this->db->connection);
         header('location: roznice_oop.php');        
     }
+ * 
+ */
 }
 $dodaj = new Dodaj();
 $dodaj->dodajRekord();

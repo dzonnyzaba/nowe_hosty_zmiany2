@@ -1,11 +1,6 @@
 <?php
 
 class test{
-    private $xml_obyekt;
-    
-    public function __construct() {
-        $this->xml_obyekt = new XML_do_bazy();
-    }
     public function pobierzPlikiXML(){
         $dir = "xmle";
         $tabtmp = array();
@@ -13,38 +8,36 @@ class test{
         $ile = count($files);
         foreach($files as $f){
             if($f!="." && $f!=".."){
-            if($f=='10_10_0_0-18.xml'){
-                $tap = array();
-                $tap[0] = basename($f, ".xml");
-                $tap[1] = 'dhcpd-vlan10';
-                $tap[2] = 10;
-                $tabtmp[] = $tap;
-            }else{
-                $tap = array();
-                $tap[0] = basename($f, ".xml");
-                $tap[1] = 'dhcpd-vlan64';
-                $tap[2] = 64;
-                $tabtmp[] = $tap;
+                if($f=='10_10_0_0-18.xml'){
+                    $tap = array();
+                    $tap[0] = basename($f, ".xml");
+                    $tap[1] = 'dhcpd-vlan10';
+                    $tap[2] = 10;
+                    $tabtmp[] = $tap;
+                }else{
+                    $tap = array();
+                    $tap[0] = basename($f, ".xml");
+                    $tap[1] = 'dhcpd-vlan64';
+                    $tap[2] = 64;
+                    $tabtmp[] = $tap;
+                }
             }
-        }
-		}
+	}
         if(count($tabtmp)>=1){
-            
-                return $tabtmp;
+            return $tabtmp;
         }else{
-                echo "nieeeeeeeeeeeeeeee";
-                header('location: index.php?error=1');
-                exit();
+            echo "nieeeeeeeeeeeeeeee";
+            exit();
         }
         var_dump($tabtmp);
     }
-	
-	
+
     public function powysylaj(){
         $r = $this->pobierzPlikiXML();
         if($r){
             foreach ($r as $element){
-                $this->xml_obyekt($element[0], $element[1], $element[2]);
+                //echo "tworze obiekt XML_do_bazy->$element[0], $element[1], $element[2]<br>";
+                $xml_do_bazy_obyekt = new XML_do_bazy($element[0], $element[1], $element[2]);
             }
         }
     }
@@ -53,7 +46,6 @@ class test{
 class XML_do_bazy{
     private $plik_input_conf;
     private $plik_input_conf_to_txt;
-    //private $lista_xmli;
     private $plik_xml;
     private $plik_xml_to_txt;
     private $dataczas;
@@ -63,11 +55,11 @@ class XML_do_bazy{
 	
     
     public function __construct($plikxml, $plikconf, $jakasiec){
-            $this->plik_input_conf = $plikconf.".conf";
-            $this->plik_input_conf_to_txt = $plikconf.'.txt';
-            $this->plik_xml = $plikxml.'.xml';
-            $this->plik_xml_to_txt = $plikxml.'.txt';
-            $this->vlan = $jakasiec;
+        $this->plik_input_conf = $plikconf.".conf";
+        $this->plik_input_conf_to_txt = $plikconf.'.txt';
+        $this->plik_xml = $plikxml.'.xml';
+        $this->plik_xml_to_txt = $plikxml.'.txt';
+        $this->vlan = $jakasiec;
         
         $this->dataczas = date("d-m-y");
         $this->class_db_file = 'db.php';
@@ -77,33 +69,8 @@ class XML_do_bazy{
         }else{
             echo "brak pliku z klasą do łączenia z db";
         }
+        $this->tworzPlikiTxt();
     }
-    
-//    public function wypelnijTabliceZnane(){
-//        $sql = "LOAD DATA LOCAL INFILE 'C:/xampp/htdocs/nowe_hosty/nowe_hosty_zmiany1/txt/$this->plik_input_conf_to_txt' IGNORE INTO TABLE tmp 
-//                FIELDS TERMINATED BY ',' LINES TERMINATED BY '\r\n' (@klucz, nowy_mac, nowy_ip, data, VLAN)";
-//    }
-
-//    private function pobierzPlikiXML(){
-//        $dir = "xml";
-//        $tabtmp = array();
-//        $files = scandir($dir);
-//        foreach($files as $f){
-//            if($f!="." && $f!=".."){
-//                $tabtmp[]=$f;		
-//            }
-//        }
-//
-//        if(count($tabtmp)>=1){
-//                return $tabtmp;
-//        }else{
-//                echo "nieeeeeeeeeeeeeeee";
-//                header('location: index.php?error=1');
-//                exit();
-//        }
-//        var_dump($tabtmp);
-//    }
-	
 	
     public function tworzStringXMLnaTxt(){
         $obiekt = simplexml_load_file("xmle/".$this->plik_xml);
@@ -128,6 +95,7 @@ class XML_do_bazy{
     
     public function tworzStringConfNaTxt(){
         $wzor = '@^host ([0-9a-zA-Z._-]+) +{fixed-address (\d+\.\d+\.\d+\.\d+) ?;hardware ethernet +([a-fA-F0-9]{2}:[a-fA-F0-9]{2}:[a-fA-F0-9]{2}:[a-fA-F0-9]{2}:[a-fA-F0-9]{2}:[a-fA-F0-9]{2});}@';
+        echo $this->plik_input_conf."<br>";
         $tab_z_conf = file("confy/".$this->plik_input_conf);
         $string = "";
         $licznik=0;
@@ -139,12 +107,15 @@ class XML_do_bazy{
                 }
             }
         }
+        //echo $string;
+        //echo "<br><br><br>";
         return $string;
     }
     
     public function tworzPlikiTxt(){
             file_put_contents("txt/".$this->plik_input_conf_to_txt, $this->tworzStringConfNaTxt());
             file_put_contents("txt/". $this->plik_xml_to_txt, $this->tworzStringXMLnaTxt());
+            $this->wypelnijTabliceTmpiZnane();
     }
     
     public function wypelnijTabliceTmpiZnane(){
@@ -227,9 +198,10 @@ public function utworzDate($s){
 
 }
 
-$nowyxml = new XML_do_bazy();
-$nowyxml->tworzPlikiTxt();
-$nowyxml->wypelnijTabliceTmpiZnane();
+$test = new test();
+$test->powysylaj();
+//$nowyxml->tworzPlikiTxt();
+//$nowyxml->wypelnijTabliceTmpiZnane();
 //$nowyxml->pobierzPlikiXML();
 //header('Location: roznice_oop.php');
 
