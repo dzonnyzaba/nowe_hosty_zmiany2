@@ -30,15 +30,15 @@ class test{
             return $tabtmp;
         }else{
             echo "nieeeeeeeeeeeeeeee";
-            exit();
+            exit();//tu wstawić return 0
         }
         //var_dump($tabtmp);
     }
-
+	
 	private function zapiszDoLoga($komunikat){
 		file_put_contents('roznice_oop_log.txt', $komunikat."\r\n",  FILE_APPEND);
 	}
-	
+
     public function powysylaj(){
 		$this->zapiszDoLoga("powysylaj()");
         $r = $this->pobierzPlikiXML();
@@ -52,7 +52,7 @@ class test{
 			//header('Location: roznice_oop.php');
 			$this->wyswietlNaglowek();
 			echo $roznica->wyswietlTabeleRoznice();
-			$this->wyswietlStopke();			
+			$this->wyswietlStopke();
         }
     }
 	
@@ -67,8 +67,8 @@ class test{
 							<tr>
 								<th></th><th>id</th><th>adres IP</th><th>adres MAC</th><th></th>
 							</tr>";
-	}	
-
+	}
+	
 	private function wyswietlStopke(){
 		echo "</table>
 			 <a href=\"zakoncz_oop.php\">Zakończ</a>
@@ -103,6 +103,7 @@ class XML_do_bazy{
         }else{
             echo "brak pliku z klasą do łączenia z db";
         }
+        
     }
 	
 	public function przetwarzaj(){
@@ -133,7 +134,7 @@ class XML_do_bazy{
     
     public function tworzStringConfNaTxt(){
         $wzor = '@^host ([0-9a-zA-Z._-]+) +{fixed-address (\d+\.\d+\.\d+\.\d+) ?;hardware ethernet +([a-fA-F0-9]{2}:[a-fA-F0-9]{2}:[a-fA-F0-9]{2}:[a-fA-F0-9]{2}:[a-fA-F0-9]{2}:[a-fA-F0-9]{2});}@';
-        //echo $this->plik_input_conf."<br>";
+        echo $this->plik_input_conf."<br>";
         $tab_z_conf = file("confy/".$this->plik_input_conf);
         $string = "";
         $licznik=0;
@@ -150,31 +151,31 @@ class XML_do_bazy{
     
     public function tworzPlikiTxt(){
 		$this->zapiszDoLoga("tworze pliki txt dla pary plików txt/".$this->plik_input_conf_to_txt." txt/". $this->plik_xml_to_txt);
-        file_put_contents("txt/".$this->plik_input_conf_to_txt, $this->tworzStringConfNaTxt());
-        file_put_contents("txt/". $this->plik_xml_to_txt, $this->tworzStringXMLnaTxt());
+            file_put_contents("txt/".$this->plik_input_conf_to_txt, $this->tworzStringConfNaTxt());
+            file_put_contents("txt/". $this->plik_xml_to_txt, $this->tworzStringXMLnaTxt()); 
     }
     
     public function wypelnijTabliceTmpiZnane(){
 		$this->zapiszDoLoga("wypełniam obie tablice tmp i znane_hosty");
 		//var_dump($this->lista_xmli)."<br>";
         //foreach($this->lista_xmli as $plik_xml){
-        $sql_tmp = "LOAD DATA LOCAL INFILE 'C:/xampp/htdocs/nowe_hosty/nowe_hosty_zmiany2/txt/$this->plik_xml_to_txt' IGNORE INTO TABLE tmp 
+        $sql_tmp = "LOAD DATA LOCAL INFILE 'e:/programy/Xampp/htdocs/standard/nowe_hosty_zmiany2/txt/$this->plik_xml_to_txt' IGNORE INTO TABLE tmp 
 			FIELDS TERMINATED BY ',' LINES TERMINATED BY '\r\n' (@klucz, nowy_mac, nowy_ip, data, VLAN)";
-        $sql_znane = "LOAD DATA LOCAL INFILE 'C:/xampp/htdocs/nowe_hosty/nowe_hosty_zmiany2/txt/$this->plik_input_conf_to_txt' IGNORE INTO TABLE  znane_hosty
+        $sql_znane = "LOAD DATA LOCAL INFILE 'e:/programy/Xampp/htdocs/standard/nowe_hosty_zmiany2/txt/$this->plik_input_conf_to_txt' IGNORE INTO TABLE  znane_hosty
 			FIELDS TERMINATED BY ',' LINES TERMINATED BY '\r\n' (@klucz, nazwa_hosta, mac_address, ip_address, VLAN)";
         
         if($result = mysqli_query($this->db->connection, $sql_tmp)){
-			$this->zapiszDoLoga("wypełniam tablice tmp");			
-			$result = mysqli_query($this->db->connection, $sql_tmp);
-			$this->zapiszDoLoga("wypełniam tablice tmp ".$result);		
+			$this->zapiszDoLoga("wypełniam tablice tmp");
+        $result = mysqli_query($this->db->connection, $sql_tmp);
+		$this->zapiszDoLoga("wypełniam tablice tmp ".$result);
         }
         if($result = mysqli_query($this->db->connection, $sql_znane)){
 			$this->zapiszDoLoga("wypełniam tablice znane");
-			$result = mysqli_query($this->db->connection, $sql_znane);
-			$this->zapiszDoLoga("wypełniam tablice znane ".$result);			
+        $result = mysqli_query($this->db->connection, $sql_znane);
+		$this->zapiszDoLoga("wypełniam tablice znane ".$result);
         }
-	if(!file_exists('C:/xampp/htdocs/nowe_hosty/nowe_hosty_baza/stare_pliki_xml/'.$this->dataczas)){
-            mkdir('C:/xampp/htdocs/nowe_hosty/nowe_hosty_baza/stare_pliki_xml/'.$this->dataczas);
+	if(!file_exists('e:/programy/Xampp/htdocs/standard/nowe_hosty_zmiany2/stare_pliki_xml/'.$this->dataczas)){
+            mkdir('e:/programy/Xampp/htdocs/standard/nowe_hosty_zmiany2/stare_pliki_xml/'.$this->dataczas);
 	}
 //	rename('C:/xampp/htdocs/nowe_hosty/nowe_hosty_baza/xml/'.$plik_xml, 
 //	'C:/xampp/htdocs/nowe_hosty/nowe_hosty_baza/stare_pliki_xml/'.$this->dataczas.'/'.$plik_xml);
@@ -305,7 +306,7 @@ class Roznice{
 		file_put_contents("txt/roznice.txt", $string); 
         $this->czyscTabeleZnaneItmp();
         //echo $tabelka;
-		$sql_roznice = "LOAD DATA LOCAL INFILE 'c:/xampp/htdocs/nowe_hosty/nowe_hosty_zmiany2/txt/roznice.txt' IGNORE INTO TABLE  roznice
+		$sql_roznice = "LOAD DATA LOCAL INFILE 'e:/programy/Xampp/htdocs/standard/nowe_hosty_zmiany2/txt/roznice.txt' IGNORE INTO TABLE  roznice
 			FIELDS TERMINATED BY ',' LINES TERMINATED BY '\r\n' (@klucz, nowy_mac, nowy_ip, data, VLAN)";
 		//if($result = mysqli_query($this->db->connection, $sql_roznice)){
 		//	$this->zapiszDoLoga("wypełniam tablice tmp");
@@ -315,43 +316,45 @@ class Roznice{
 		
     }
         
-    public function wyswietlTabeleRoznice(){
-        $licznik=1;
-        $tabelka = "";
-        $sql_wyswietl_tab_roznice = "SELECT * FROM roznice";
-        $res = mysqli_query($this->db->connection, $sql_wyswietl_tab_roznice);
-        while($row = mysqli_fetch_array($res)){
-            $tabelka .= "<tr><td>$licznik</td>";
-            $tabelka .= "<td>".$row['id_nowego_hosta']."</td><td>".
-            $row['nowy_ip']."</td><td>".$row['nowy_mac'].'</td><td><a href="dodaj_host_oop.php?id='.
-            $row['id_nowego_hosta'].'">Dodaj hosta do bazy</a></td>';
-            $tabelka .= "</tr>";
-            $licznik++;
+        public function wyswietlTabeleRoznice(){
+            $licznik=1;
+            $tabelka = "";
+            $sql_wyswietl_tab_roznice = "SELECT * FROM roznice";
+            $res = mysqli_query($this->db->connection, $sql_wyswietl_tab_roznice);
+            while($row = mysqli_fetch_array($res)){
+                    $tabelka .= "<tr><td>$licznik</td>";
+                    $tabelka .= "<td>".$row['id_nowego_hosta']."</td><td>".
+                    $row['nowy_ip']."</td><td>".$row['nowy_mac'].'</td><td><a href="dodaj_host_oop.php?id='.
+                    $row['id_nowego_hosta'].'">Dodaj hosta do bazy</a></td>';
+                    $tabelka .= "</tr>";
+                    $licznik++;
+            }
+            mysqli_free_result($res);
+            return $tabelka;
         }
-        mysqli_free_result($res);
-        return $tabelka;
-    }
         
         
-    public function czyscTabeleZnaneItmp(){
-		$this->zapiszDoLoga("czyszcze tablice");
-        $rezultat_czysc_znane = mysqli_query($this->db->connection, $this->zapytanie_czysc_znane);        
-        $rezultat_zeruj_znane = mysqli_query($this->db->connection, $this->zapytanie_zeruj_znane);
+        public function czyscTabeleZnaneItmp(){
+			$this->zapiszDoLoga("czyszcze tablice");
+            $rezultat_czysc_znane = mysqli_query($this->db->connection, $this->zapytanie_czysc_znane);        
+            $rezultat_zeruj_znane = mysqli_query($this->db->connection, $this->zapytanie_zeruj_znane);
         
-        $rezultat_czysc_tmp = mysqli_query($this->db->connection, $this->zapytanie_czysc_tmp);        
-        $rezultat_zeruj_tmp = mysqli_query($this->db->connection, $this->zapytanie_zeruj_tmp);
-		$this->zapiszDoLoga($rezultat_czysc_znane." ".$rezultat_zeruj_znane." ".$rezultat_czysc_tmp
-		." ".$rezultat_zeruj_tmp);
-    }
+            $rezultat_czysc_tmp = mysqli_query($this->db->connection, $this->zapytanie_czysc_tmp);        
+            $rezultat_zeruj_tmp = mysqli_query($this->db->connection, $this->zapytanie_zeruj_tmp);
+			$this->zapiszDoLoga($rezultat_czysc_znane." ".$rezultat_zeruj_znane." ".$rezultat_czysc_tmp
+			." ".$rezultat_zeruj_tmp);
+        }
         
-    public function __destruct(){
+        public function __destruct(){
             
-    }
+        }
 		
-	private function zapiszDoLoga($komunikat){
-		file_put_contents('roznice_oop_log.txt', $komunikat."\r\n",  FILE_APPEND);
-	}
-}
+		private function zapiszDoLoga($komunikat){
+			file_put_contents('roznice_oop_log.txt', $komunikat."\r\n",  FILE_APPEND);
+		}
+    }
+
+
 
 $test = new test();
 $test->powysylaj();

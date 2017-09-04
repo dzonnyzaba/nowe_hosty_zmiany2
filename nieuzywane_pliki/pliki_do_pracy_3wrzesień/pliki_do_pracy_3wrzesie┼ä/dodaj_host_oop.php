@@ -4,6 +4,8 @@ if(isset($_GET['id'])){
 ?>
 <form method="post">
     nazwa: <input type="text" name="nazwa"/>
+<!--    lokalizacja: <input type="text" name="lokalizacja"/>
+    uwagi: <input type="text" name="uwagi"/>-->
     lokalizacja: <textarea name="lokalizacja"></textarea>
     uwagi: <textarea name="uwagi"></textarea>
     <input type="submit" value="dodaj"/>
@@ -38,9 +40,9 @@ class Dodaj{
     }
     
     public function pobierzPozostaleDane(){
-		$zapytanie_nowe = "SELECT * FROM roznice WHERE id_nowego_hosta=$this->id";
-		$rezultat_nowe = mysqli_query($this->db->connection, $zapytanie_nowe);
-		$row = mysqli_fetch_array($rezultat_nowe);
+        $zapytanie_nowe = "SELECT * FROM roznice WHERE id_nowego_hosta=$this->id";
+	$rezultat_nowe = mysqli_query($this->db->connection, $zapytanie_nowe);
+	$row = mysqli_fetch_array($rezultat_nowe);
         return $row;
     }
     
@@ -62,10 +64,10 @@ class Dodaj{
 		$rezultat_czysc_roznice = mysqli_query($this->db->connection, $sql_kasuj_roznice);        
         $rezultat_zeruj_roznice = mysqli_query($this->db->connection, $sql_zeruj_roznice);
 	}
-
+	
 	private function zapiszDoLoga($komunikat){
 		file_put_contents('roznice_oop_log.txt', $komunikat."\r\n",  FILE_APPEND);
-	}	
+	}
 }
 $dodaj = new Dodaj();
 $dodaj->dodaj_do_pliku();
