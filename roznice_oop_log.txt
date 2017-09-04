@@ -22,55 +22,215 @@ wypełniam tablice znane 1
 wywołuje skrypt roznice_oop.php
 czyszcze tablice
 1 1 1 1
-powysylaj()
-szukam plików xml
-znalazłem plik xml 10_10_0_0-18.xml
-znalazłem plik xml 10_10_64_0-18.xml
-zaczytuje plik 10_10_0_0-18
-tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
-wypełniam obie tablice tmp i znane_hosty
-wypełniam tablice tmp
-wypełniam tablice tmp 1
-wypełniam tablice znane
-wypełniam tablice znane 1
-wywołuje skrypt roznice_oop.php
-czyszcze tablice
-1 1 1 1
-zaczytuje plik 10_10_64_0-18
-tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
-wypełniam obie tablice tmp i znane_hosty
-wypełniam tablice tmp
-wypełniam tablice tmp 1
-wypełniam tablice znane
-wypełniam tablice znane 1
-wywołuje skrypt roznice_oop.php
-czyszcze tablice
-1 1 1 1
-powysylaj()
-szukam plików xml
-znalazłem plik xml 10_10_0_0-18.xml
-znalazłem plik xml 10_10_64_0-18.xml
-zaczytuje plik 10_10_0_0-18
-tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
-wypełniam obie tablice tmp i znane_hosty
-wypełniam tablice tmp
-wypełniam tablice tmp 1
-wypełniam tablice znane
-wypełniam tablice znane 1
-wywołuje skrypt roznice_oop.php
-czyszcze tablice
-1 1 1 1
-zaczytuje plik 10_10_64_0-18
-tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
-wypełniam obie tablice tmp i znane_hosty
-wypełniam tablice tmp
-wypełniam tablice tmp 1
-wypełniam tablice znane
-wypełniam tablice znane 1
-wywołuje skrypt roznice_oop.php
-czyszcze tablice
-1 1 1 1
-dodaje do confy/dhcpd-vlan64.conf, host 232 {fixed-address 10.10.102.68;hardware ethernet BC:AD:28:16:5C:B3;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 powysylaj()
 szukam plików xml
@@ -96,8 +256,1740 @@ wypełniam tablice znane 1
 wywołuje skrypt roznice_oop.php
 czyszcze tablice
 1 1 1 1
-dodaje do confy/dhcpd-vlan10.conf, host 10.10.0.116 {fixed-address 10.10.0.116;hardware ethernet 10:0D:7F:62:F0:CA;}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+powysylaj()
+szukam plików xml
+znalazłem plik xml 10_10_0_0-18.xml
+znalazłem plik xml 10_10_64_0-18.xml
+zaczytuje plik 10_10_0_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan10.txt txt/10_10_0_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
+zaczytuje plik 10_10_64_0-18
+tworze pliki txt dla pary plików txt/dhcpd-vlan64.txt txt/10_10_64_0-18.txt
+wypełniam obie tablice tmp i znane_hosty
+wypełniam tablice tmp
+wypełniam tablice tmp 1
+wypełniam tablice znane
+wypełniam tablice znane 1
+wywołuje skrypt roznice_oop.php
+czyszcze tablice
+1 1 1 1
 powysylaj()
 szukam plików xml
 znalazłem plik xml 10_10_0_0-18.xml

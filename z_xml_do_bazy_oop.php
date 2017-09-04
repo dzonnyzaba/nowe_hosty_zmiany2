@@ -51,7 +51,19 @@ class test{
 			$roznica = new Roznice();
 			//header('Location: roznice_oop.php');
 			$this->wyswietlNaglowek();
-			echo $roznica->wyswietlTabeleRoznice();
+			//echo $roznica->wyswietlTabeleRoznice();
+			$tabelka_wynikow = $roznica->wyswietlTabeleRoznice();
+			foreach($tabelka_wynikow as $tabelka){
+				if($tabelka){
+				/*echo 	"<table border=1>
+							<tr>
+								<th></th><th>id</th><th>adres IP</th><th>adres MAC</th><th></th>
+							</tr>";*/
+				echo $tabelka."</table>";
+				//echo "</table>";
+				}
+			}
+			//echo $tabelka_wynikow['licznik'];
 			$this->wyswietlStopke();			
         }
     }
@@ -62,15 +74,12 @@ class test{
 					<head>
 						<meta charset=\"UTF-8\" />
 					</head>
-					<body>
-						<table border=1>
-							<tr>
-								<th></th><th>id</th><th>adres IP</th><th>adres MAC</th><th></th>
-							</tr>";
+					<body>";
+
 	}	
 
 	private function wyswietlStopke(){
-		echo "</table>
+		echo "
 			 <a href=\"zakoncz_oop.php\">Zakończ</a>
 			</body>
 			</html>";
@@ -316,20 +325,28 @@ class Roznice{
     }
         
     public function wyswietlTabeleRoznice(){
-        $licznik=1;
-        $tabelka = "";
+		$licznik = 0;
+        $tabelka_sieci_do_wyswietlenia = array();
+		$tabelka_sieci_do_wyswietlenia['licznik'] = 0;
         $sql_wyswietl_tab_roznice = "SELECT * FROM roznice";
         $res = mysqli_query($this->db->connection, $sql_wyswietl_tab_roznice);
-        while($row = mysqli_fetch_array($res)){
-            $tabelka .= "<tr><td>$licznik</td>";
-            $tabelka .= "<td>".$row['id_nowego_hosta']."</td><td>".
-            $row['nowy_ip']."</td><td>".$row['nowy_mac'].'</td><td><a href="dodaj_host_oop.php?id='.
+        while($row = mysqli_fetch_assoc($res)){
+			if(!isset($tabelka_sieci_do_wyswietlenia[$row['VLAN']])){
+				$tabelka_sieci_do_wyswietlenia[$row['VLAN']]="<table border=1>
+							<tr>
+								<th></th><th>id</th><th>adres IP</th><th>adres MAC</th><th>Sieć</th><th></th>
+							</tr>";
+			}
+            $tabelka_sieci_do_wyswietlenia[$row['VLAN']] .= "<tr>\n<td>$licznik</td>\n";
+            $tabelka_sieci_do_wyswietlenia[$row['VLAN']] .= "<td>".$row['id_nowego_hosta']."</td>\n<td>".
+            $row['nowy_ip']."</td>\n<td>".$row['nowy_mac'].'</td><td>'.$row['VLAN'].'</td><td><a href="dodaj_host_oop.php?id='.
             $row['id_nowego_hosta'].'">Dodaj hosta do bazy</a></td>';
-            $tabelka .= "</tr>";
+            $tabelka_sieci_do_wyswietlenia[$row['VLAN']] .= "</tr>\n";
+			//$tabelka_sieci_do_wyswietlenia[0] = "wyświetlono ".$licznik." hostów";
             $licznik++;
         }
         mysqli_free_result($res);
-        return $tabelka;
+        return $tabelka_sieci_do_wyswietlenia;
     }
         
         

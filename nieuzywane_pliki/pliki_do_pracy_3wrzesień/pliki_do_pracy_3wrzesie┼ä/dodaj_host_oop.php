@@ -4,8 +4,6 @@ if(isset($_GET['id'])){
 ?>
 <form method="post">
     nazwa: <input type="text" name="nazwa"/>
-<!--    lokalizacja: <input type="text" name="lokalizacja"/>
-    uwagi: <input type="text" name="uwagi"/>-->
     lokalizacja: <textarea name="lokalizacja"></textarea>
     uwagi: <textarea name="uwagi"></textarea>
     <input type="submit" value="dodaj"/>

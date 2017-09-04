@@ -103,7 +103,6 @@ class XML_do_bazy{
         }else{
             echo "brak pliku z klasą do łączenia z db";
         }
-        
     }
 	
 	public function przetwarzaj(){
@@ -352,9 +351,7 @@ class Roznice{
 		private function zapiszDoLoga($komunikat){
 			file_put_contents('roznice_oop_log.txt', $komunikat."\r\n",  FILE_APPEND);
 		}
-    }
-
-
+}
 
 $test = new test();
 $test->powysylaj();
